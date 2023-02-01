@@ -1,4 +1,4 @@
-﻿using RemoveAuction;
+﻿using AuctionsTest;
 using System.Security.Cryptography.X509Certificates;
 
 namespace AuctionsTest
@@ -14,10 +14,10 @@ namespace AuctionsTest
 
             //Act
             PlaceBid bid = new PlaceBid();
-            bool tryBidResult = bid.tryPlaceBid(bidUserID, auctionOwnerUserID);
+            bool tryBidResult = bid.TryPlaceBid(bidUserID, auctionOwnerUserID);
 
             //Assert
-            Assert.True(tryRemoveResult);
+            Assert.False(tryBidResult);
         }
     }
 }

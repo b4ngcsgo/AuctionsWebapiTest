@@ -1,4 +1,4 @@
-﻿using RemoveAuction;
+﻿
 using System.Security.Cryptography.X509Certificates;
 
 namespace AuctionsTest
@@ -13,7 +13,7 @@ namespace AuctionsTest
 
             //Act
             RemoveAuction tryRemove = new RemoveAuction();
-            bool tryRemoveResult = tryRemove.tryRemoveAuction(BidCount);
+            bool tryRemoveResult = tryRemove.TryRemoveAuction(BidCount);
 
             //Assert
             Assert.True(tryRemoveResult);
